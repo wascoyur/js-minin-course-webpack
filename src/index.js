@@ -7,7 +7,9 @@ import csv from './assets/data.csv'
 import * as $ from 'jquery';
 
 const post = new Post('Webpack Ost Title', webpackLogo);
-console.log(post.toString());
-console.log('JSON:', json);
-console.log('xml: ', xml);
-console.log('csv: ', csv);
+
+$('pre').html(post.toString())
+// console.log(post.toString());
+// console.log('JSON:', json);
+// console.log('xml: ', xml);
+// console.log('csv: ', csv);
