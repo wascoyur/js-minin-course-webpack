@@ -4,6 +4,7 @@ import json from './assets/json'
 import webpackLogo from './assets/webpack-logo.png'
 import xml from './assets/data.xml' 
 import csv from './assets/data.csv'
+import * as $ from 'jquery';
 
 const post = new Post('Webpack Ost Title', webpackLogo);
 console.log(post.toString());
