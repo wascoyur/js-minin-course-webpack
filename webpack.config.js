@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
 	context: path.resolve(__dirname,'src'),
@@ -24,7 +25,13 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: './index.html'
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new CopyWebpackPlugin([
+			{
+				from: '',
+				to: ''
+			} 
+		])
 	],
 	module: {
 		rules: [
@@ -49,5 +56,8 @@ module.exports = {
 				use:['csv-loader']
 			}
 		]
+	},
+	devServer: {
+		port:3000
 	}
 }
