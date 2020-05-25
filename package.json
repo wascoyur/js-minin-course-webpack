@@ -4,7 +4,7 @@
   "description": "webpack course",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch",
+    "devCompile": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
   },
